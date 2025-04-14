@@ -1,5 +1,3 @@
-/* Estilos básicos y reset */
-
 
 @font-face {
     font-family: "BigBlueTermPlus Nerd Font Propo";
@@ -31,27 +29,26 @@ body {
 } 
 .Principal{
 
-    width: 100vw;
-    height:100vh;
-
-
-}
-.logo{
-
-    width: 30%;
-    height: 30%;
+    width: 100%;
+    min-height: 70vh; /* Por ejemplo, 70% de la altura del viewport */
+    padding: 5vh 5vw; /* Espacios alrededor */
+    box-sizing: border-box;
 
 }
-
-
-
+.logo {
+    width: clamp(250px, 35vw, 700px); /* Se adapta mejor al tamaño del dispositivo */
+    height: auto;                     /* mantiene la proporción de la imagen */
+    display: block;
+    margin: 0 auto;                   /* centra la imagen horizontalmente */
+  }
+  
 
 
 hr {
     border: none;        /* Elimina bordes predeterminados */
-    height: 1px;         /* Grosor de la línea */
+    height: 1%;         /* Grosor de la línea */
     background-color: #000; /* Color de la línea (negro) */
-    margin: 10px 0;      /* Espacio superior e inferior */
+    margin: 10% 0;      /* Espacio superior e inferior */
 }
 
 .BoxTop {
@@ -89,35 +86,29 @@ canvas {
 
 /* Degradado de texto para todo el contenido */
 p {
-    font-family:"Poppins";
-    font-size: 1.5em !important; /* Tamaño del título */
- 
-  /*  background-image: linear-gradient(to right, #0058f0, #00f088); /* Degradado de azul a verde */
+    font-family: "Poppins";
+    font-size: clamp(0.8rem, 2vw, 1.2em); /* Tamaño ajustado a un poco más pequeño */
     background-color: #ffffff;
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
-    font-size: 15px;
 }
 
 
 h1 {
     font-family:"BigBlueTermPlus Nerd Font Propo";
-    font-size: 8em !important; /* Tamaño del título */
-    margin-bottom: 20px; /* Espaciado */
+    font-size: clamp(2rem, 8vw, 8em); /* Cambia según pantalla */
+  
     color: #fff; /* Texto blanco */
     text-shadow: 
-        0 0 1px #fff, 
-        0 0 5px #fff, 
-        0 0 2px rgba(255, 255, 255, 0.3); /* Efecto de neón más suave */
+        0 0 1% #fff, 
+        0 0 5% #fff, 
+        0 0 2% rgba(255, 255, 255, 0.3); /* Efecto de neón más suave */
 }
-
 
 h2 { 
     font-family:"BigBlueTermPlus Nerd Font Propo";
-
-    font-size: 3em !important; /* Tamaño del título */
-
+    font-size: clamp(1.5rem, 5vw, 3em);
     background-image: linear-gradient(to right, #ffffff, #ffffff); /* Degradado de azul a rosa */
     -webkit-background-clip: text;
     background-clip: text;
@@ -126,7 +117,6 @@ h2 {
 
 h3 { 
     font-family:"BigBlueTermPlus Nerd Font Propo";
-
     background-image: linear-gradient(to right, #ffffff, #ffffff); /* Degradado de azul a rosa */
     -webkit-background-clip: text;
     background-clip: text;
@@ -150,7 +140,7 @@ header {
     position: absolute;
     top: 0;
     width: 100%;
-    padding: 20px;
+    padding: 20%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -159,11 +149,15 @@ header {
 
 .barra-lateral {
     position: fixed;
+    width: 250px; /* Ancho fijo */
+    height: 100vh; /* Altura completa de la pantalla */
     top: 0; /* Mantiene la barra lateral en la parte superior */
     right: 0; /* Mueve la barra lateral a la derecha */
     background: rgba(0, 0, 0, 0.5); /* Fondo oscuro, puedes ajustar la opacidad */
-    padding: 20px; /* Espaciado interno */
-    border-radius: 10px; /* Bordes redondeados */
+    padding: 2rem; /* Espaciado interno */
+    border-radius: 10px 0 0 10px; /* Bordes redondeados */
+    background: rgba(0, 0, 0, 0.85);
+    border: 2px dashed rgb(127, 20, 0);
 }
 
 nav ul {
@@ -173,7 +167,8 @@ nav ul {
 }
 
 nav ul li {
-    margin-bottom: 15px; /* Espaciado entre botones */
+    margin-bottom: 0.2rem; /* Espaciado entre botones */
+    border: 2px dashed rgb(127, 0, 0);
 }
 
 nav ul li a {
@@ -181,8 +176,10 @@ nav ul li a {
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
-    font-size: 1.5em; /* Tamaño de fuente más grande */
-    padding: 10px; /* Espaciado interno de los botones */
+    font-size: clamp(1.2em, 3vw, 2em); 
+    padding: 1rem; /* Espaciado interno de los botones */
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.5); /* añade un glow */
+    border: 2px dashed rgb(250, 237, 27);
 }
 
 nav ul li a:hover {
@@ -217,29 +214,28 @@ nav ul li a:hover {
 section {
     
         text-align: center;
-        padding: 25px 3px;
+        padding: 25% 3%;
         box-sizing: border-box;
 }
+.contenedorC{
 
-h1 {
-    font-size: 4em;
-    margin-bottom: 20px;
+    max-width: 100%;   /* Ancho máximo de la caja */
+    margin: 0 auto;      /* Centrar horizontalmente */
+    padding: 0 2%;     /* Espacio a los lados (para móviles) */
+
+
 }
 
-h2 {
-    font-size: 2.5em;
-    margin-bottom: 20px;
-}
 
 .btn,
 .btn-especifico {
     position: relative;
-    padding: 15px 30px; /* Ajusta según sea necesario */
+    padding: 15% 30%; /* Ajusta según sea necesario */
     background: linear-gradient(to right, #0028f0, #f72b8e);
     color: #fff;
     text-decoration: none;
     font-weight: bold;
-    border-radius: 5px;
+    border-radius: 5%;
     border: none;
     transition: background 0.3s, box-shadow 0.3s; /* Añadir box-shadow a la transición */
 }
@@ -247,39 +243,44 @@ h2 {
 .btn:hover,
 .btn-especifico:hover {
     background: linear-gradient(to right,#0028f0 #f72b8e);
-    box-shadow: 0 0 10px #f72b8e, 0 0 20px #f72b8e; /* Efecto de borde neón */
+    box-shadow: 0 0 10% #f72b8e, 0 0 20% #f72b8e; /* Efecto de borde neón */
 }
 
 .btn-especifico {
     position: relative;
-    top: 50px; /* Mueve el botón 50 píxeles hacia abajo */
+    top: 50%; /* Mueve el botón 50 píxeles hacia abajo */
 }
 
 .seccion {
-    padding: 30px 20px;
-    box-sizing: border-box;
+
+    padding: 5vh 5vw;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    background-color: rgba(255, 255, 255, 0.03); /* fondo sutil opcional */
+    border-radius: 10px;
 }
 
-.SeccionMeca{
-    padding: 5px 20px;
-    box-sizing: border-box;
-}
 
+  
 .grid {
-    display: flex;
-    justify-content: space-around;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 0.3rem 0.8rem;
+    justify-items: center;
 }
+
 
 .card {
     background-color: rgba(255, 255, 255, 0.1);
-    padding: 20px;
+    padding: 1rem;
     border-radius: 10px;
-    width: 23%;
-    height: 25%;
+    width: 100%;     /* Ocupa todo el espacio que le da la columna */
+    max-width: 300px; /* No crece más de esto */
+    height: auto;
+    text-align: center;
 }
-
 .card h4 {
-    margin-bottom: 10px;
+    margin-bottom: 10%;
 }
 
 .video-wrapper {
@@ -298,7 +299,7 @@ h2 {
 
 footer {
     text-align: center;
-    padding: 20px;
+    padding: 1% 5%; /* 5% arriba/abajo, 10% izquierda/derecha */
     background-color: #111;
     position: relative;
 }
@@ -321,12 +322,12 @@ footer {
 }
 
 .caja {
-    border: 2px solid #ffffff; /* Borde de la caja */
-    padding: 20px; /* Espaciado interior */
-    margin: 20px 500px; /* Espaciado exterior */
+    border: 2% solid #ffffff; /* Borde de la caja */
+    padding: 20%; /* Espaciado interior */
+    margin: 20% 50%; /* Espaciado exterior */
     background-color: #000000; /* Color de fondo */
-    border-radius: 10px; /* Bordes redondeados */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    border-radius: 10%; /* Bordes redondeados */
+    box-shadow: 0 4% 8% rgba(0, 0, 0, 0.1); /* Sombra sutil */
     box-sizing: border-box;
     right: 0;
     
@@ -336,139 +337,143 @@ footer {
         display: flex; /* Activa flexbox */
         justify-content: space-between; /* Distribuye el contenido con espacio entre los elementos */
         align-items: center; /* Alinea los elementos verticalmente al centro */
-        gap: 20px; /* Espacio entre la imagen y el texto */
-        padding: 20px; /* Espaciado interno */
+        gap: 1rem; /* Espacio entre la imagen y el texto */
+    
     }
 
+    .SeccionMeca{
+        padding: 5vh 5vw;
+        margin-top: 5vh;
+        margin-bottom: 5vh;
+        background-color: rgba(255, 255, 255, 0.03); /* fondo sutil opcional */
+        border-radius: 10px;
+    }
+          
 
     * Aseguramos que solo los elementos dentro de la sección #Mecanica1 se vean afectados */
-#Mecanica1 .contenedor {
-  display: flex; /* Usamos Flexbox para alinear los elementos */
-  align-items: flex-start; /* Alinea verticalmente los elementos al principio (superior) */
-  gap: 20px; /* Añadimos un espacio entre la imagen y el texto */
-}
-
-#Mecanica1 .texto {
-    flex: 1;
-}
-
-#Mecanica1 h2, #Mecanica1 p {
-    margin: 0 50px;
-    padding: 0; 
-    line-height: 1.5; 
-}
-
-
-#Mecanica1 .texto h2,
-#Mecanica1 .texto p {
-    text-align: left; 
-}
-
-
-#Mecanica1 .imagen img {
-    width: 600px; 
-    height: auto; 
-    margin: 30px; 
-}
-
-
-    #Mecanica2 .contenedor {
-        display: flex; 
-        flex-direction: row-reverse; 
-        align-items: center; 
-        gap: 20px; 
+    #Mecanica1 .contenedor {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        padding: 2rem 1rem;
+      }
+      
+      #Mecanica1 .texto {
+        flex: 1 1 350px;
+        max-width: 600px;
+        padding: 1rem;
+      }
+      
+      #Mecanica1 .texto h2,
+      #Mecanica1 .texto p {
+        margin: 0;
+        text-align: left;
+        line-height: 1.5;
+        font-size: clamp(1rem, 2vw, 1.3rem); /* 🔥 Escala entre dispositivos */
+      }
+      
+      #Mecanica1 .imagen {
+        flex: 1 1 350px;
+        max-width: 600px;
+        padding: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      
+      #Mecanica1 .imagen img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Suave sombra opcional */
+      }
+      #Mecanica1 .contenedor,
+      #Mecanica2 .contenedor,
+      #Mecanica3 .contenedor,
+      #Mecanica4 .contenedor {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        padding: 2rem 1rem;
+        gap: 2rem;
+      }
+      #Mecanica1 .texto,
+      #Mecanica2 .texto,
+      #Mecanica3 .texto,
+      #Mecanica4 .texto {
+        flex: 1 1 350px;
+        max-width: 600px;
+        padding: 1rem;
+      }
+      #Mecanica1 .texto h2,
+      #Mecanica2 .texto h2,
+      #Mecanica3 .texto h2,
+      #Mecanica4 .texto h2{
+        margin: 0;
+        text-align: left;
+        line-height: 1.5;
+        font-size: clamp(1.5rem, 3vw, 2rem); /* Títulos más grandes */
+      }
+      #Mecanica1 .texto p,
+      #Mecanica2 .texto p,
+      #Mecanica3 .texto p,
+      #Mecanica4 .texto p {
+        margin: 0;
+        text-align: left;
+        line-height: 1.5;
+        font-size: clamp(1rem, 2vw, 1.3rem);
+      }
+      #Mecanica1 .imagen,
+      #Mecanica2 .imagen,
+      #Mecanica3 .imagen,
+      #Mecanica4 .imagen {
+        flex: 1 1 350px;
+        max-width: 600px;
+        padding: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      #Mecanica1 .imagen img,
+      #Mecanica2 .imagen img,
+      #Mecanica3 .imagen img,
+      #Mecanica4 .imagen img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+      }
+      
+      /* SOLO para Mecánica 4: invierte el orden */
+      #Mecanica4 .contenedor,
+      #Mecanica2 .contenedor {
+        flex-direction: row-reverse;
+      }
+      
+    #MadeWith img{
+        width: 80%;  /* Ajusta este valor según lo que necesites */
+        max-width: 700px; /* Evita que crezca demasiado en pantallas grandes */
+        height: auto;  /* Mantiene la proporción de la imagen */
+   
     }
-
-    #Mecanica2 .texto {
-        flex: 1; 
-    }
-
-    #Mecanica2 h2, #Mecanica2 p {
-        margin: 0 50px; 
-        padding: 0; 
-        line-height: 1.5; 
-    }
-
-    #Mecanica2 .texto h2,
-        #Mecanica2 .texto p {
-        text-align: left; 
-    }
-
-    #Mecanica2 .imagen img {
-        width: 700px; 
-        height: auto; 
-        margin: 30px; 
-    }
-
-    #Mecanica3 .contenedor {
-        display: flex; /* Usamos Flexbox para alinear los elementos */
-        align-items: center; /* Alinea verticalmente los elementos al principio (superior) */
-        gap: 20px; /* Añadimos un espacio entre la imagen y el texto */
-    }
-    
-    #Mecanica3 .texto {
-        flex: 1;
-    }
-    
-    #Mecanica3 h2, #Mecanica3 p {
-        margin: 0 50px;
-        padding: 0; 
-        line-height: 1.5; 
-    }
-
-    #Mecanica3 .texto h2,
-    #Mecanica3 .texto p {
-        text-align: left; 
-    }
-
-    #Mecanica3 .imagen img {
-        width: 600px; 
-        height: auto; 
-        margin: 30px; 
-    }
-
-    #Mecanica4 .contenedor {
-        display: flex; 
-        flex-direction: row-reverse; 
-        align-items: center; 
-        gap: 20px; 
-    }
-
-    #Mecanica4 .texto {
-        flex: 1; 
-    }
-
-    #Mecanica4 h2, #Mecanica4 p {
-        margin: 0 50px; 
-        padding: 0; 
-        line-height: 1.5; 
-    }
-
-    #Mecanica4 .texto h2,
-        #Mecanica4 .texto p {
-        text-align: left; 
-    }
-
-    #Mecanica4 .imagen img {
-        width: 600px; 
-        height: auto; 
-        margin: 30px; 
-    }
-
     #Team img {
-        width: 900px;  /* Ajusta este valor según lo que necesites */
+        width: 90%;  /* Ajusta este valor según lo que necesites */
+        max-width: 900px;
         height: auto;  /* Mantiene la proporción de la imagen */
     }
 
     #miembros .grid .card img {
-        width: 150px; /* Establece un tamaño fijo para la imagen */
+        width: 50%; /* Establece un tamaño fijo para la imagen */
         height: auto; /* Mantiene la proporción de la imagen */
-        margin-bottom: 10px; /* Opcional: espacio debajo de la imagen */
+        margin-bottom: 10%; /* Opcional: espacio debajo de la imagen */
     }
     #miembros {
         line-height: 1.6;
-        margin: 20px;
-        padding: 20px;
+        padding: 5% 10%; /* 5% arriba/abajo, 10% izquierda/derecha */
         background-color: #000000;
         border-radius: 8px;
     }
@@ -487,19 +492,19 @@ footer {
     
     #miembros h3 {
         font-size: 1.5em;
-        margin-top: 1px;
+        margin-top: 1%;
 
     }
 
     .barra-lateral {
     position: fixed;
-    left: -250px; /* Inicialmente fuera de la pantalla */
+    left: -50%; /* Inicialmente fuera de la pantalla */
     top: 0;
-    width: 250px;
+    width: 75%;
     height: 100%;
     background-color: #333;
     transition: left 0.3s ease;
-    padding-top: 60px;
+    padding-top: 60%;
     z-index: 1000; /* Para asegurarse de que esté encima del contenido */
 }
 
@@ -509,36 +514,29 @@ footer {
 }
 
 .barra-lateral ul li {
-    padding: 10px 15px;
+    padding: 1rem 1,5rem;
 }
 
 .barra-lateral ul li a {
     color: white;
     text-decoration: none;
     display: block;
+    
 }
 
 .barra-lateral.open {
     left: 0; /* Cuando se añade la clase 'open', la barra lateral se muestra */
 }
 
-.toggle-btn {
-    background-color: #333;
-    color: white;
-    border: none;
-    padding: 10px;
-    font-size: 24px;
-    cursor: pointer;
-}
 
 .close-btn {
     position: absolute;
-    top: 10px;
-    right: 10px;
+    top: 10%;
+    right: 10%;
     background: none;
     border: none;
     color: white;
-    font-size: 30px;
+    font-size: 30%;
     cursor: pointer;
     display: none; /* Oculto por defecto */
 }
@@ -548,40 +546,109 @@ footer {
 }
 
 /* Estilo para el botón 'Menú' */
+
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #000000;
+    border: none;
+    border-radius: 50px;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+     /* Lo nuevo para fijarlo arriba a la izquierda */
+  position: fixed;
+  top: clamp(15px, 2vw, 40px);
+  left: clamp(15px, 2vw, 40px);
+  z-index: 9999; /* Para que esté por encima de todo */
+
+  }
+  
+  .button:hover {
+    background-color: #111111;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .button:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(255, 0, 0, 0.3);
+  }
+  
+  .button:active {
+    transform: translateY(1px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+  
+  .button::before {
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50px;
+    z-index: -1;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .button:hover::before {
+    top: -8px;
+    left: -8px;
+    right: -8px;
+    bottom: -8px;
+  }
+
 .toggle-btn {
     position: fixed;
-    top: 10px;
-    left: 10px;
+    top: 10%;
+    left: 10%;
     background-color: #333;
     color: white;
     border: none;
-    padding: 15px;
-    font-size: 24px;
+    padding: 10%;      /* ← Usamos esta versión */
+    font-size: 24%;    /* ← Usamos esta versión */
     cursor: pointer;
-    z-index: 1000; /* Asegura que esté por encima de la barra lateral */
+    z-index: 1000;     /* ← Asegura que esté encima de la barra lateral */
 }
 
 /* Estilo de la barra lateral */
 .barra-lateral {
     position: fixed;
-    left: -250px; /* Inicialmente fuera de la pantalla */
+    left: -100%; /* Inicialmente fuera de la pantalla */
     top: 0;
-    width: 250px;
+    width: 25%;
     height: 100%;
     background-color: #333;
     transition: left 0.3s ease;
-    padding-top: 60px;
+    padding-top: 10%;
     z-index: 999; /* Para que esté debajo del botón 'Menú' */
+    border: 2px dashed red;
 }
 
 /* Estilo de la lista de la barra lateral */
 .barra-lateral ul {
     list-style-type: none;
     padding: 0;
+    border: 2px dashed rgb(250, 237, 237);
 }
 
 .barra-lateral ul li {
-    padding: 10px 15px;
+    padding: 10% 15%;
+
+    border: 2px dashed rgb(0, 27, 237);
 }
 
 .barra-lateral ul li a {
@@ -598,16 +665,15 @@ footer {
 /* Estilo del botón de cierre 'X' */
 .close-btn {
     position: absolute;
-    top: 10px;
-    right: 10px;
+    top: 10%;
+    right: 10%;
     background: none;
     border: none;
     color: white;
-    font-size: 30px;
+    font-size: 30%;
     cursor: pointer;
     display: none; /* Oculto por defecto */
 }
-
 /* Muestra el botón de cierre 'X' cuando la barra lateral está abierta */
 .barra-lateral.open .close-btn {
     display: block;
@@ -617,3 +683,68 @@ footer {
 .barra-lateral.open ~ .toggle-btn {
     display: none;
 }
+.btn {
+    position: relative;
+    padding: 15% 30%; /* Ajusta según sea necesario */
+    background: linear-gradient(to right, #0028f0, #f72b8e);
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5%;
+    border: none;
+    transition: background 0.3s, box-shadow 0.3s; /* Añadir box-shadow a la transición */
+}
+
+/* From Uiverse.io by mrhyddenn */ 
+.shadow__btn {
+    padding: 10px 20px;
+    border: none;
+    font-size: 17px;
+    color: #fff;
+    border-radius: 7px;
+    letter-spacing: 4px;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: 0.5s;
+    transition-property: box-shadow;
+  }
+  
+  .shadow__btn {
+    background: rgb(0,140,255);
+    box-shadow: 0 0 25px rgb(0,140,255);
+  }
+  
+  .shadow__btn:hover {
+    box-shadow: 0 0 5px rgb(0,140,255),
+                0 0 25px rgb(0,140,255),
+                0 0 50px rgb(0,140,255),
+                0 0 100px rgb(0,140,255);
+  }
+  .mega__btn {
+    padding: 10px 20px;
+    border: none;
+    font-size: 17px;
+    color: #fff;
+    border-radius: 7px;
+    letter-spacing: 2px;
+    font-weight: 700;
+    text-transform: uppercase;
+    background: linear-gradient(to right, #0028f0, #f72b8e); /* 🎨 Colores del viejo botón */
+    box-shadow: 0 0 25px rgba(0, 40, 240, 0.5); /* Inicial sombra */
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.5s ease;
+    transition-property: box-shadow, transform;
+  }
+  
+  .mega__btn:hover {
+    box-shadow: 0 0 5px #f72b8e,
+                0 0 25px #0028f0,
+                0 0 50px #f72b8e,
+                0 0 100px #0028f0;
+    transform: translateY(-3px);
+  }
+  .seccion h2 {
+    margin-bottom: 2rem; /* 👈 Espacio entre título y botones */
+  }
+  
