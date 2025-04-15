@@ -258,10 +258,9 @@ section {
 }
 
 .seccion {
-
     padding: 5vh 5vw;
-    margin-top: 5vh;
-    margin-bottom: 5vh;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
     background-color: rgba(255, 255, 255, 0.03); /* fondo sutil opcional */
     border-radius: 10px;
 }
@@ -349,8 +348,8 @@ footer {
 
     .SeccionMeca{
         padding: 5vh 5vw;
-        margin-top: 5vh;
-        margin-bottom: 5vh;
+        margin-top: 1vh;
+        margin-bottom: 1vh;
         background-color: rgba(255, 255, 255, 0.03); /* fondo sutil opcional */
         border-radius: 10px;
     }
