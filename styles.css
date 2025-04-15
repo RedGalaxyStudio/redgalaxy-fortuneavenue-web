@@ -454,6 +454,13 @@ footer {
         box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
       }
       
+      #Mecanica2 .imagen video{
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
       /* SOLO para Mecánica 4: invierte el orden */
       #Mecanica4 .contenedor,
       #Mecanica2 .contenedor {
