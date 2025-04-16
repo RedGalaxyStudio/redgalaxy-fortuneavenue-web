@@ -91,6 +91,7 @@ document.addEventListener('click', function(event) {
     // Verifica si el clic fue fuera de la barra lateral y el botón
     if (!barraLateral.contains(event.target) && !toggleButton.contains(event.target)) {
         barraLateral.classList.remove('open');
+        toggleButton.style.display = 'block'; 
     }
 });
 
