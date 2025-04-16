@@ -1,777 +1,985 @@
-
 @font-face {
-    font-family: "BigBlueTermPlus Nerd Font Propo";
-    src: url("./fonts/BigBlueTermPlusNFP.woff2") format('woff2');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
+  font-family: "BigBlueTermPlus Nerd Font Propo";
+  src: url("./fonts/BigBlueTermPlusNFP.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
-    font-family: "Poppins";
-    src: url("./fonts/Poppins-Regular.woff2") format('woff2');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
+  font-family: "Poppins";
+  src: url("./fonts/Poppins-Regular.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 /* Importar la fuente ArcadePix */
 .text {
-    font-family: 'Arcadepix Plus Regular';
+  font-family: "Arcadepix Plus Regular";
 }
 
 body {
-    font-family: "Arcadepix Plus Regular", sans-serif;
-    color: #f200ff;
-    background-color: #000000;
-    width: 100%;
-    height: 100%;
-} 
-.Principal{
-
-    width: 100%;
-    min-height: 70vh; /* Por ejemplo, 70% de la altura del viewport */
-    padding: 5vh 5vw; /* Espacios alrededor */
-    box-sizing: border-box;
-
+  font-family: "Arcadepix Plus Regular", sans-serif;
+  color: #f200ff;
+  background-color: #000000;
+  width: 100%;
+  height: 100%;
+}
+.Principal {
+  width: 100%;
+  min-height: 70vh; /* Por ejemplo, 70% de la altura del viewport */
+  padding: 5vh 5vw; /* Espacios alrededor */
+  box-sizing: border-box;
 }
 .logo {
-    width: clamp(250px, 35vw, 700px); /* Se adapta mejor al tamaño del dispositivo */
-    height: auto;                     /* mantiene la proporción de la imagen */
-    display: block;
-    margin: 0 auto;                   /* centra la imagen horizontalmente */
-  }
-  
-
+  width: clamp(
+    250px,
+    35vw,
+    700px
+  ); /* Se adapta mejor al tamaño del dispositivo */
+  height: auto; /* mantiene la proporción de la imagen */
+  display: block;
+  margin: 0 auto; /* centra la imagen horizontalmente */
+}
 
 hr {
-    border: none;        /* Elimina bordes predeterminados */
-    height: 1%;         /* Grosor de la línea */
-    background-color: #000; /* Color de la línea (negro) */
-    margin: 10% 0;      /* Espacio superior e inferior */
+  border: none; /* Elimina bordes predeterminados */
+  height: 1%; /* Grosor de la línea */
+  background-color: #000; /* Color de la línea (negro) */
+  margin: 10% 0; /* Espacio superior e inferior */
 }
 
 .BoxTop {
-
-    margin-top: 4em; /* Espacio hacia arriba */
-  
+  margin-top: 4em; /* Espacio hacia arriba */
 }
 
 canvas {
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    z-index: -1; /* Envía el canvas al fondo */
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1; /* Envía el canvas al fondo */
 }
 
 .BoxTop2 {
-
-    margin-top: 2em; /* Espacio hacia arriba */
-  
+  margin-top: 2em; /* Espacio hacia arriba */
 }
 
 .BoxOpp2 {
-
-    margin-bottom:2em; /* Espacio hacia arriba */
-  
+  margin-bottom: 2em; /* Espacio hacia arriba */
 }
 
 .BoxOpp {
-
-    margin-bottom:2.5em; /* Espacio hacia arriba */
-  
+  margin-bottom: 2.5em; /* Espacio hacia arriba */
 }
 
 /* Degradado de texto para todo el contenido */
 p {
-    font-family: "Poppins";
-    font-size: clamp(0.8rem, 2vw, 1.2em); /* Tamaño ajustado a un poco más pequeño */
-    background-color: #ffffff;
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
+  font-family: "Poppins";
+  font-size: clamp(
+    0.8rem,
+    2vw,
+    1.2em
+  ); /* Tamaño ajustado a un poco más pequeño */
+  background-color: #ffffff;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
-
 
 h1 {
-    font-family:"BigBlueTermPlus Nerd Font Propo";
-    font-size: clamp(2rem, 8vw, 8em); /* Cambia según pantalla */
-  
-    color: #fff; /* Texto blanco */
-    text-shadow: 
-        0 0 1% #fff, 
-        0 0 5% #fff, 
-        0 0 2% rgba(255, 255, 255, 0.3); /* Efecto de neón más suave */
+  font-family: "BigBlueTermPlus Nerd Font Propo";
+  font-size: clamp(2rem, 8vw, 8em); /* Cambia según pantalla */
+
+  color: #fff; /* Texto blanco */
+  text-shadow: 0 0 1% #fff, 0 0 5% #fff, 0 0 2% rgba(255, 255, 255, 0.3); /* Efecto de neón más suave */
 }
 
-h2 { 
-    font-family:"BigBlueTermPlus Nerd Font Propo";
-    font-size: clamp(1.5rem, 5vw, 3em);
-    background-image: linear-gradient(to right, #ffffff, #ffffff); /* Degradado de azul a rosa */
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
+h2 {
+  font-family: "BigBlueTermPlus Nerd Font Propo";
+  font-size: clamp(1.5rem, 5vw, 3em);
+  background-image: linear-gradient(
+    to right,
+    #ffffff,
+    #ffffff
+  ); /* Degradado de azul a rosa */
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 
-h3 { 
-    font-family:"BigBlueTermPlus Nerd Font Propo";
-    background-image: linear-gradient(to right, #ffffff, #ffffff); /* Degradado de azul a rosa */
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-
+h3 {
+  font-family: "BigBlueTermPlus Nerd Font Propo";
+  background-image: linear-gradient(
+    to right,
+    #ffffff,
+    #ffffff
+  ); /* Degradado de azul a rosa */
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 
-h4 { 
-    font-family:"BigBlueTermPlus Nerd Font Propo";
-    font-size: 1.5em !important; /* Tamaño del título */
-   
-    background-image: linear-gradient(to right, #ffffff, #ffffff); /* Degradado de azul a rosa */
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
+h4 {
+  font-family: "BigBlueTermPlus Nerd Font Propo";
+  font-size: 1.5em !important; /* Tamaño del título */
 
+  background-image: linear-gradient(
+    to right,
+    #ffffff,
+    #ffffff
+  ); /* Degradado de azul a rosa */
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
-
 
 header {
-    position: absolute;
-    top: 0;
-    width: 100%;
-    padding: 20%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 1000;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  padding: 20%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
 }
-
 .barra-lateral {
-    position: fixed;
-    width: 250px; /* Ancho fijo */
-    height: 100vh; /* Altura completa de la pantalla */
-    top: 0; /* Mantiene la barra lateral en la parte superior */
-    right: 0; /* Mueve la barra lateral a la derecha */
-    background: rgba(0, 0, 0, 0.5); /* Fondo oscuro, puedes ajustar la opacidad */
-    padding: 2rem; /* Espaciado interno */
-    border-radius: 10px 0 0 10px; /* Bordes redondeados */
-    background: rgba(0, 0, 0, 0.85);
-    border: 2px dashed rgb(127, 20, 0);
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: clamp(15rem, 25vw, 20rem);
+  height: clamp(16rem, 66vh, 28rem); /* Altura más alta */
+  background: rgba(0, 0, 0, 0.85);
+  padding: clamp(1rem, 2vw, 2rem);
+  border-radius: clamp(0.5rem, 1vw, 1rem) 0 0 clamp(0.5rem, 1vw, 1rem);
+  box-sizing: border-box;
+  z-index: 1000;
+  left: -100%; /* Oculta inicialmente */
+  transition: left 0.3s ease;
+  overflow: hidden; 
 }
 
-nav ul {
-    list-style: none;
-    display: flex;
-    flex-direction: column; /* Cambia a columna para que los botones estén en vertical */
+.barra-lateral.open {
+  left: 0;
 }
 
-nav ul li {
-    margin-bottom: 0.2rem; /* Espaciado entre botones */
-    border: 2px dashed rgb(127, 0, 0);
+/* Lista de navegación */
+.barra-lateral ul {
+  list-style-type: none;
+  padding: 0;
+  justify-content: space-between;
+  flex-grow: 1; /* Hace que la lista crezca para llenar el espacio disponible */
+  height: 100%; /* Ocupa toda la altura disponible de la barra lateral */
 }
 
-nav ul li a {
-    background-image: linear-gradient(to right, #ffffff, #ffffff); /* Degradado de azul a verde */
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-    font-size: clamp(1.2em, 3vw, 2em); 
-    padding: 1rem; /* Espaciado interno de los botones */
-    text-shadow: 0 0 5px rgba(255, 255, 255, 0.5); /* añade un glow */
-    border: 2px dashed rgb(250, 237, 27);
-}
+.barra-lateral ul li {
 
-nav ul li a:hover {
-    background-image: linear-gradient(to right, #0028f0, #f72b8e); /* Degradado invertido en hover */
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-}
-
-
-
-#bg-video {
-    width: 100%;
-    height: 100vh;
-    object-fit: cover;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-}
-
-.overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    background: rgba(0, 0, 0, 0.5);
-    z-index: -1;
-}
-
-section {
-    
-        text-align: center;
-        padding: 25% 3%;
-        box-sizing: border-box;
-}
-.contenedorC{
-
-    max-width: 100%;   /* Ancho máximo de la caja */
-    margin: 0 auto;      /* Centrar horizontalmente */
-    padding: 0 2%;     /* Espacio a los lados (para móviles) */
-
+  margin-bottom: 1%; /* Márgenes en porcentaje para un ajuste proporcional */
+  margin-top:1%;
+  padding: 3% 5%; /* Padding en porcentaje para un ajuste proporcional */
+  overflow: hidden;
+  flex: 0 1 auto; /* Esto asegura que los elementos se ajusten proporcionalmente */
 
 }
 
-
-.btn,
-.btn-especifico {
-    position: relative;
-    padding: 15% 30%; /* Ajusta según sea necesario */
-    background: linear-gradient(to right, #0028f0, #f72b8e);
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 5%;
-    border: none;
-    transition: background 0.3s, box-shadow 0.3s; /* Añadir box-shadow a la transición */
+.barra-lateral ul li a {
+  display: block;
+  text-decoration: none;
+  color: white;
+  background-image: linear-gradient(to right, #ffffff, #ffffff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-size: clamp(1rem, 2vw, 1.5rem);
+  padding: 2% 4%; /* Padding en porcentaje para que se ajuste dinámicamente */
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+  white-space: nowrap;
+  word-wrap: break-word;
 }
 
-.btn:hover,
-.btn-especifico:hover {
-    background: linear-gradient(to right,#0028f0 #f72b8e);
-    box-shadow: 0 0 10% #f72b8e, 0 0 20% #f72b8e; /* Efecto de borde neón */
+/* Hover general */
+.barra-lateral ul li a:hover {
+  background-image: linear-gradient(to right, #0028f0, #f72b8e);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 
-.btn-especifico {
-    position: relative;
-    top: 50%; /* Mueve el botón 50 píxeles hacia abajo */
-}
-
-.seccion {
-    padding: 5vh 5vw;
-    margin-top: 1vh;
-    margin-bottom: 1vh;
-    background-color: rgba(255, 255, 255, 0.03); /* fondo sutil opcional */
-    border-radius: 10px;
-}
-
-
-  
-.grid {
-    display: grid;
-    gap: 0.3rem 0.8rem;
-    justify-items: center;
-}
-@media (min-width: 1200px) {
-    .grid {
-      grid-template-columns: repeat(4, minmax(250px, 1fr)); /* 4 columnas en pantallas grandes */
-    }
-  }
-  
-  @media (max-width: 1200px) and (min-width: 600px) {
-    .grid {
-      grid-template-columns: repeat(2, minmax(250px, 1fr)); /* 2 columnas en pantallas medianas */
-    }
-  }
-  
-  @media (max-width: 600px) {
-    .grid {
-      grid-template-columns: repeat(1, minmax(250px, 1fr)); /* 1 columna en pantallas pequeñas */
-    }
-  }
-
-.card {
-    background-color: rgba(255, 255, 255, 0.1);
-    padding: 1rem;
-    border-radius: 10px;
-    width: 100%;     /* Ocupa todo el espacio que le da la columna */
-    max-width: 300px; /* No crece más de esto */
-    height: auto;
-    text-align: center;
-}
-.card h4 {
-    margin-bottom: 10%;
-}
-
-.video-wrapper {
-    position: relative;
-    padding-bottom: 56.25%;
-    height: 0;
-}
-
-.video-wrapper iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
-
-footer {
-    text-align: center;
-    padding: 1% 5%; /* 5% arriba/abajo, 10% izquierda/derecha */
-    background-color: #111;
-    position: relative;
-}
-
-/* Nuevos botones en la barra de navegación */
+/* Estilo especial para enlaces #AcercaDe y #Contribuidores */
 .barra-lateral ul li a[href="#AcercaDe"],
 .barra-lateral ul li a[href="#Contribuidores"] {
-    background-image: linear-gradient(to right, #0058f0, #00f088);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
+  background-image: linear-gradient(to right, #0058f0, #00f088);
 }
 
 .barra-lateral ul li a[href="#AcercaDe"]:hover,
 .barra-lateral ul li a[href="#Contribuidores"]:hover {
-    background-image: linear-gradient(to right, #0028f0, #f72b8e);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
+  background-image: linear-gradient(to right, #0028f0, #f72b8e);
 }
 
+/* Botón cerrar */
+.close-btn {
+  position: absolute;
+  top: 10%;
+  right: 10%;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: none;
+}
+
+/* Mostrar botón cerrar solo cuando el menú está abierto */
+.barra-lateral.open .close-btn {
+  display: block;
+}
+
+/* Ocultar botón "Menú" cuando la barra está abierta (si usás uno) */
+.barra-lateral.open ~ .toggle-btn {
+  display: none;
+}
+
+
+#bg-video {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: -1;
+}
+
+section {
+  text-align: center;
+  padding: 25% 3%;
+  box-sizing: border-box;
+}
+.contenedorC {
+  max-width: 100%; /* Ancho máximo de la caja */
+  margin: 0 auto; /* Centrar horizontalmente */
+  padding: 0 2%; /* Espacio a los lados (para móviles) */
+}
+
+.btn,
+.btn-especifico {
+  position: relative;
+  padding: 15% 30%; /* Ajusta según sea necesario */
+  background: linear-gradient(to right, #0028f0, #f72b8e);
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5%;
+  border: none;
+  transition: background 0.3s, box-shadow 0.3s; /* Añadir box-shadow a la transición */
+}
+
+.btn:hover,
+.btn-especifico:hover {
+  background: linear-gradient(to right, #0028f0 #f72b8e);
+  box-shadow: 0 0 10% #f72b8e, 0 0 20% #f72b8e; /* Efecto de borde neón */
+}
+
+.btn-especifico {
+  position: relative;
+  top: 50%; /* Mueve el botón 50 píxeles hacia abajo */
+}
+
+.seccion {
+  padding: 5vh 5vw;
+  margin-top: 1vh;
+  margin-bottom: 1vh;
+  border-radius: 10px;
+}
+
+.grid {
+  display: grid;
+  gap: 1rem 1rem;
+  justify-items: center;
+}
+.Markito {
+  max-width: 100%; /* O el valor que consideres adecuado */
+  padding: 0 8%; /* Añade un padding lateral para que no toque el borde de la ventana */
+}
+
+@media (min-width: 1200px) {
+  .grid {
+    grid-template-columns: repeat(
+      4,
+      minmax(300px, 1fr)
+    ); /* 4 columnas en pantallas grandes */
+    justify-content: center; /* Centra las columnas */
+  }
+}
+
+@media (max-width: 1200px) and (min-width: 600px) {
+  .grid {
+    grid-template-columns: repeat(
+      2,
+      minmax(300px, 1fr)
+    ); /* 2 columnas en pantallas medianas */
+    justify-content: center; /* Centra las columnas */
+  }
+}
+
+@media (max-width: 600px) {
+  .grid {
+    grid-template-columns: repeat(
+      1,
+      minmax(300px, 1fr)
+    ); /* 1 columna en pantallas pequeñas */
+    justify-content: center; /* Centra las columnas */
+  }
+}
+.gridP {
+  display: grid;
+  justify-items: center;
+}
+@media (min-width: 1400px) {
+  .gridP {
+    grid-template-columns: repeat(
+      4,
+      minmax(300px, 1fr)
+    ); /* 4 columnas en pantallas grandes */
+    gap: 4rem; /* O el valor que se vea bien */
+    justify-content: center; /* Centra las columnas */
+  }
+}
+
+@media (max-width: 1399px) and (min-width: 600px) {
+  .gridP {
+    grid-template-columns: repeat(
+      2,
+      minmax(300px, 1fr)
+    ); /* 2 columnas en pantallas medianas */
+    gap: 4rem; /* O el valor que se vea bien */
+    justify-content: center; /* Centra las columnas */
+  }
+}
+
+@media (max-width: 599px) {
+  .gridP {
+    grid-template-columns: repeat(
+      1,
+      minmax(300px, 1fr)
+    ); /* 1 columna en pantallas pequeñas */
+    gap: 4rem; /* O el valor que se vea bien */
+    justify-content: center; /* Centra las columnas */
+  }
+}
+
+.video-wrapper {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+}
+
+.video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+footer {
+  text-align: center;
+  padding: 1% 5%; /* 5% arriba/abajo, 10% izquierda/derecha */
+  background-color: #111;
+  position: relative;
+}
+
+
+
 .caja {
-    border: 2% solid #ffffff; /* Borde de la caja */
-    padding: 20%; /* Espaciado interior */
-    margin: 20% 50%; /* Espaciado exterior */
-    background-color: #000000; /* Color de fondo */
-    border-radius: 10%; /* Bordes redondeados */
-    box-shadow: 0 4% 8% rgba(0, 0, 0, 0.1); /* Sombra sutil */
-    box-sizing: border-box;
-    right: 0;
-    
-    }
+  border: 2% solid #ffffff; /* Borde de la caja */
+  padding: 20%; /* Espaciado interior */
+  margin: 20% 50%; /* Espaciado exterior */
+  background-color: #000000; /* Color de fondo */
+  border-radius: 10%; /* Bordes redondeados */
+  box-shadow: 0 4% 8% rgba(0, 0, 0, 0.1); /* Sombra sutil */
+  box-sizing: border-box;
+  right: 0;
+}
 
-    .contenedor {
-        display: flex; /* Activa flexbox */
-        justify-content: space-between; /* Distribuye el contenido con espacio entre los elementos */
-        align-items: center; /* Alinea los elementos verticalmente al centro */
-        gap: 1rem; /* Espacio entre la imagen y el texto */
-    
-    }
+.contenedor {
+  display: flex; /* Activa flexbox */
+  justify-content: space-between; /* Distribuye el contenido con espacio entre los elementos */
+  align-items: center; /* Alinea los elementos verticalmente al centro */
+  gap: 1rem; /* Espacio entre la imagen y el texto */
+}
 
-    .SeccionMeca{
-        padding: 5vh 5vw;
-        margin-top: 1vh;
-        margin-bottom: 1vh;
-        background-color: rgba(255, 255, 255, 0.03); /* fondo sutil opcional */
-        border-radius: 10px;
-    }
-          
+.SeccionMeca {
+  padding: 5vh 5vw;
+  margin-top: 1vh;
+  margin-bottom: 1vh;
+  border-radius: 10px;
+}
 
-    * Aseguramos que solo los elementos dentro de la sección #Mecanica1 se vean afectados */
-    #Mecanica1 .contenedor {
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        justify-content: center;
-        padding: 2rem 1rem;
-      }
-      
-      #Mecanica1 .texto {
-        flex: 1 1 350px;
-        max-width: 600px;
-        padding: 1rem;
-      }
-      
-      #Mecanica1 .texto h2,
-      #Mecanica1 .texto p {
-        margin: 0;
-        text-align: left;
-        line-height: 1.5;
-        font-size: clamp(1rem, 2vw, 1.3rem); /* 🔥 Escala entre dispositivos */
-      }
-      
-      #Mecanica1 .imagen {
-        flex: 1 1 350px;
-        max-width: 600px;
-        padding: 1rem;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-      
-      #Mecanica1 .imagen img {
-        width: 100%;
-        max-width: 100%;
-        height: auto;
-        border-radius: 8px;
-        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Suave sombra opcional */
-      }
-      #Mecanica1 .contenedor,
-      #Mecanica2 .contenedor,
-      #Mecanica3 .contenedor,
-      #Mecanica4 .contenedor {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
-        padding: 2rem 1rem;
-        gap: 2rem;
-      }
-      #Mecanica1 .texto,
-      #Mecanica2 .texto,
-      #Mecanica3 .texto,
-      #Mecanica4 .texto {
-        flex: 1 1 350px;
-        max-width: 600px;
-        padding: 1rem;
-      }
-      #Mecanica1 .texto h2,
-      #Mecanica2 .texto h2,
-      #Mecanica3 .texto h2,
-      #Mecanica4 .texto h2{
-        margin: 0;
-        text-align: left;
-        line-height: 1.5;
-        font-size: clamp(1.5rem, 3vw, 2rem); /* Títulos más grandes */
-      }
-      #Mecanica1 .texto p,
-      #Mecanica2 .texto p,
-      #Mecanica3 .texto p,
-      #Mecanica4 .texto p {
-        margin: 0;
-        text-align: left;
-        line-height: 1.5;
-        font-size: clamp(1rem, 2vw, 1.3rem);
-      }
-      #Mecanica1 .imagen,
-      #Mecanica2 .imagen,
-      #Mecanica3 .imagen,
-      #Mecanica4 .imagen {
-        flex: 1 1 350px;
-        max-width: 600px;
-        padding: 1rem;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-      #Mecanica1 .imagen img,
-      #Mecanica2 .imagen img,
-      #Mecanica3 .imagen img,
-      #Mecanica4 .imagen img {
-        width: 100%;
-        max-width: 100%;
-        height: auto;
-        border-radius: 8px;
-        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-      }
-      
-      #Mecanica2 .imagen video{
+*
+  Aseguramos
+  que
+  solo
+  los
+  elementos
+  dentro
+  de
+  la
+  sección
+  #Mecanica1
+  se
+  vean
+  afectados
+  */
+  #Mecanica1
+  .contenedor {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1rem;
+}
+
+#Mecanica1 .texto {
+  flex: 1 1 350px;
+  max-width: 600px;
+  padding: 1rem;
+}
+
+#Mecanica1 .texto h2,
+#Mecanica1 .texto p {
+  margin: 0;
+  text-align: left;
+  line-height: 1.5;
+  font-size: clamp(1rem, 2vw, 1.3rem); /* 🔥 Escala entre dispositivos */
+}
+
+#Mecanica1 .imagen {
+  flex: 1 1 350px;
+  max-width: 600px;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#Mecanica1 .imagen img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Suave sombra opcional */
+}
+#Mecanica1 .contenedor,
+#Mecanica2 .contenedor,
+#Mecanica3 .contenedor,
+#Mecanica4 .contenedor {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 1rem;
+  gap: 2rem;
+}
+#Mecanica1 .texto,
+#Mecanica2 .texto,
+#Mecanica3 .texto,
+#Mecanica4 .texto {
+  flex: 1 1 350px;
+  max-width: 600px;
+  padding: 1rem;
+}
+#Mecanica1 .texto h2,
+#Mecanica2 .texto h2,
+#Mecanica3 .texto h2,
+#Mecanica4 .texto h2 {
+  margin: 0;
+  text-align: left;
+  line-height: 1.5;
+  font-size: clamp(1.5rem, 3vw, 2rem); /* Títulos más grandes */
+}
+#Mecanica1 .texto p,
+#Mecanica2 .texto p,
+#Mecanica3 .texto p,
+#Mecanica4 .texto p {
+  margin: 0;
+  text-align: left;
+  line-height: 1.5;
+  font-size: clamp(1rem, 2vw, 1.3rem);
+}
+#Mecanica1 .imagen,
+#Mecanica2 .imagen,
+#Mecanica3 .imagen,
+#Mecanica4 .imagen {
+  flex: 1 1 350px;
+  max-width: 600px;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#Mecanica1 .imagen img,
+#Mecanica2 .imagen img,
+#Mecanica3 .imagen img,
+#Mecanica4 .imagen img {
   width: 100%;
   max-width: 100%;
   height: auto;
   border-radius: 8px;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
 }
-      /* SOLO para Mecánica 4: invierte el orden */
-      #Mecanica4 .contenedor,
-      #Mecanica2 .contenedor {
-        flex-direction: row-reverse;
-      }
-      
-    #MadeWith img{
-        width: 80%;  /* Ajusta este valor según lo que necesites */
-        max-width: 700px; /* Evita que crezca demasiado en pantallas grandes */
-        height: auto;  /* Mantiene la proporción de la imagen */
-   
-    }
-    #Team img {
-        width: 90%;  /* Ajusta este valor según lo que necesites */
-        max-width: 900px;
-        height: auto;  /* Mantiene la proporción de la imagen */
-    }
 
-    #miembros .grid .card img {
-        width: 50%; /* Establece un tamaño fijo para la imagen */
-        height: auto; /* Mantiene la proporción de la imagen */
-        margin-bottom: 10%; /* Opcional: espacio debajo de la imagen */
-    }
-    #miembros {
-        line-height: 1.6;
-        padding: 5% 10%; /* 5% arriba/abajo, 10% izquierda/derecha */
-        background-color: #000000;
-        border-radius: 8px;
-    }
-
-    #miembros h2 {
-        text-align: center;
-        font-size: 2em;
-
-    }
-    
-    #miembros p {
-        font-size: 1.1em;
-
-        margin-bottom: 1em;
-    }
-    
-    #miembros h3 {
-        font-size: 1.5em;
-        margin-top: 1%;
-
-    }
-
-    .barra-lateral {
-    position: fixed;
-    left: -50%; /* Inicialmente fuera de la pantalla */
-    top: 0;
-    width: 75%;
-    height: 100%;
-    background-color: #333;
-    transition: left 0.3s ease;
-    padding-top: 60%;
-    z-index: 1000; /* Para asegurarse de que esté encima del contenido */
+#Mecanica2 .imagen video {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+/* SOLO para Mecánica 4: invierte el orden */
+#Mecanica4 .contenedor,
+#Mecanica2 .contenedor {
+  flex-direction: row-reverse;
 }
 
-.barra-lateral ul {
-    list-style-type: none;
-    padding: 0;
+#MadeWith img {
+  width: 80%; /* Ajusta este valor según lo que necesites */
+  max-width: 700px; /* Evita que crezca demasiado en pantallas grandes */
+  height: auto; /* Mantiene la proporción de la imagen */
+}
+#Team img {
+  width: 90%; /* Ajusta este valor según lo que necesites */
+  max-width: 900px;
+  height: auto; /* Mantiene la proporción de la imagen */
 }
 
-.barra-lateral ul li {
-    padding: 1rem 1,5rem;
+#miembros .grid .cardC img {
+  width: 50%; /* Establece un tamaño fijo para la imagen */
+  height: auto; /* Mantiene la proporción de la imagen */
+  margin-bottom: 10%; /* Opcional: espacio debajo de la imagen */
+}
+#miembros {
+  line-height: 1.6;
+  padding: 5% 10%; /* 5% arriba/abajo, 10% izquierda/derecha */
+  background-color: #000000;
+  border-radius: 8px;
 }
 
-.barra-lateral ul li a {
-    color: white;
-    text-decoration: none;
-    display: block;
-    
+#miembros h2 {
+  text-align: center;
+  font-size: 2em;
 }
 
-.barra-lateral.open {
-    left: 0; /* Cuando se añade la clase 'open', la barra lateral se muestra */
+#miembros p {
+  font-size: 1.1em;
+
+  margin-bottom: 1em;
 }
 
-
-.close-btn {
-    position: absolute;
-    top: 10%;
-    right: 10%;
-    background: none;
-    border: none;
-    color: white;
-    font-size: 30%;
-    cursor: pointer;
-    display: none; /* Oculto por defecto */
-}
-
-.barra-lateral.open .close-btn {
-    display: block; /* Mostrar el botón de cerrar cuando la barra está abierta */
+#miembros h3 {
+  font-size: 1.5em;
+  margin-top: 1%;
 }
 
 /* Estilo para el botón 'Menú' */
 
-
 .button {
-    display: inline-block;
-    padding: 10px 20px;
-    font-size: 20px;
-    font-weight: bold;
-    text-align: center;
-    text-decoration: none;
-    color: #ffffff;
-    background-color: #000000;
-    border: none;
-    border-radius: 50px;
-    transition: all 0.3s ease-in-out;
-    cursor: pointer;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-     /* Lo nuevo para fijarlo arriba a la izquierda */
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  color: #ffffff;
+  background-color: #000000;
+  border: none;
+  border-radius: 50px;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* Lo nuevo para fijarlo arriba a la izquierda */
   position: fixed;
   top: clamp(15px, 2vw, 40px);
   left: clamp(15px, 2vw, 40px);
   z-index: 9999; /* Para que esté por encima de todo */
+}
 
-  }
-  
-  .button:hover {
-    background-color: #111111;
-    transform: translateY(-2px);
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
-  }
-  
-  .button:focus {
-    outline: none;
-    box-shadow: 0 0 0 3px rgba(255, 0, 0, 0.3);
-  }
-  
-  .button:active {
-    transform: translateY(1px);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-  
-  .button:disabled {
-    opacity: 0.6;
-    cursor: not-allowed;
-  }
-  
-  .button::before {
-    content: "";
-    position: absolute;
-    top: -5px;
-    left: -5px;
-    right: -5px;
-    bottom: -5px;
-    background-color: rgba(255, 255, 255, 0.1);
-    border-radius: 50px;
-    z-index: -1;
-    transition: all 0.3s ease-in-out;
-  }
-  
-  .button:hover::before {
-    top: -8px;
-    left: -8px;
-    right: -8px;
-    bottom: -8px;
-  }
+.button:hover {
+  background-color: #111111;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+.button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(255, 0, 0, 0.3);
+}
+
+.button:active {
+  transform: translateY(1px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.button::before {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50px;
+  z-index: -1;
+  transition: all 0.3s ease-in-out;
+}
+
+.button:hover::before {
+  top: -8px;
+  left: -8px;
+  right: -8px;
+  bottom: -8px;
+}
 
 .toggle-btn {
-    position: fixed;
-    top: 10%;
-    left: 10%;
-    background-color: #333;
-    color: white;
-    border: none;
-    padding: 10%;      /* ← Usamos esta versión */
-    font-size: 24%;    /* ← Usamos esta versión */
-    cursor: pointer;
-    z-index: 1000;     /* ← Asegura que esté encima de la barra lateral */
+  position: fixed;
+  top: 10%;
+  left: 10%;
+  background-color: #333;
+  color: white;
+  border: none;
+  padding: 10%; /* ← Usamos esta versión */
+  font-size: 24%; /* ← Usamos esta versión */
+  cursor: pointer;
+  z-index: 1000; /* ← Asegura que esté encima de la barra lateral */
 }
 
-/* Estilo de la barra lateral */
-.barra-lateral {
-    position: fixed;
-    left: -100%; /* Inicialmente fuera de la pantalla */
-    top: 0;
-    width: 25%;
-    height: 100%;
-    background-color: #333;
-    transition: left 0.3s ease;
-    padding-top: 10%;
-    z-index: 999; /* Para que esté debajo del botón 'Menú' */
-    border: 2px dashed red;
-}
 
-/* Estilo de la lista de la barra lateral */
-.barra-lateral ul {
-    list-style-type: none;
-    padding: 0;
-    border: 2px dashed rgb(250, 237, 237);
-}
-
-.barra-lateral ul li {
-    padding: 10% 15%;
-
-    border: 2px dashed rgb(0, 27, 237);
-}
-
-.barra-lateral ul li a {
-    color: white;
-    text-decoration: none;
-    display: block;
-}
-
-/* Mostrar la barra lateral cuando se añade la clase 'open' */
-.barra-lateral.open {
-    left: 0;
-}
-
-/* Estilo del botón de cierre 'X' */
-.close-btn {
-    position: absolute;
-    top: 10%;
-    right: 10%;
-    background: none;
-    border: none;
-    color: white;
-    font-size: 30%;
-    cursor: pointer;
-    display: none; /* Oculto por defecto */
-}
-/* Muestra el botón de cierre 'X' cuando la barra lateral está abierta */
-.barra-lateral.open .close-btn {
-    display: block;
-}
-
-/* Esconde el botón 'Menú' cuando la barra lateral está abierta */
-.barra-lateral.open ~ .toggle-btn {
-    display: none;
-}
 .btn {
-    position: relative;
-    padding: 15% 30%; /* Ajusta según sea necesario */
-    background: linear-gradient(to right, #0028f0, #f72b8e);
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 5%;
-    border: none;
-    transition: background 0.3s, box-shadow 0.3s; /* Añadir box-shadow a la transición */
+  position: relative;
+  padding: 15% 30%; /* Ajusta según sea necesario */
+  background: linear-gradient(to right, #0028f0, #f72b8e);
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5%;
+  border: none;
+  transition: background 0.3s, box-shadow 0.3s; /* Añadir box-shadow a la transición */
 }
 
-/* From Uiverse.io by mrhyddenn */ 
+/* From Uiverse.io by mrhyddenn */
 .shadow__btn {
-    padding: 10px 20px;
-    border: none;
-    font-size: 17px;
-    color: #fff;
-    border-radius: 7px;
-    letter-spacing: 4px;
-    font-weight: 700;
-    text-transform: uppercase;
-    transition: 0.5s;
-    transition-property: box-shadow;
-  }
-  
-  .shadow__btn {
-    background: rgb(0,140,255);
-    box-shadow: 0 0 25px rgb(0,140,255);
-  }
-  
-  .shadow__btn:hover {
-    box-shadow: 0 0 5px rgb(0,140,255),
-                0 0 25px rgb(0,140,255),
-                0 0 50px rgb(0,140,255),
-                0 0 100px rgb(0,140,255);
-  }
-  .mega__btn {
-    padding: 10px 20px;
-    border: none;
-    font-size: 17px;
-    color: #fff;
-    border-radius: 7px;
-    letter-spacing: 2px;
-    font-weight: 700;
-    text-transform: uppercase;
-    background: linear-gradient(to right, #0028f0, #f72b8e); /* 🎨 Colores del viejo botón */
-    box-shadow: 0 0 25px rgba(0, 40, 240, 0.5); /* Inicial sombra */
-    text-decoration: none;
-    cursor: pointer;
-    transition: 0.5s ease;
-    transition-property: box-shadow, transform;
-  }
-  
-  .mega__btn:hover {
-    box-shadow: 0 0 5px #f72b8e,
-                0 0 25px #0028f0,
-                0 0 50px #f72b8e,
-                0 0 100px #0028f0;
-    transform: translateY(-3px);
-  }
-  .seccion h2 {
-    margin-bottom: 2rem; /* 👈 Espacio entre título y botones */
-  }
-  
+  padding: 10px 20px;
+  border: none;
+  font-size: 17px;
+  color: #fff;
+  border-radius: 7px;
+  letter-spacing: 4px;
+  font-weight: 700;
+  text-transform: uppercase;
+  transition: 0.5s;
+  transition-property: box-shadow;
+}
+
+.shadow__btn {
+  background: rgb(0, 140, 255);
+  box-shadow: 0 0 25px rgb(0, 140, 255);
+}
+
+.shadow__btn:hover {
+  box-shadow: 0 0 5px rgb(0, 140, 255), 0 0 25px rgb(0, 140, 255),
+    0 0 50px rgb(0, 140, 255), 0 0 100px rgb(0, 140, 255);
+}
+.mega__btn {
+  padding: 10px 20px;
+  border: none;
+  font-size: 17px;
+  color: #fff;
+  border-radius: 7px;
+  letter-spacing: 2px;
+  font-weight: 700;
+  text-transform: uppercase;
+  background: linear-gradient(
+    to right,
+    #0028f0,
+    #f72b8e
+  ); /* 🎨 Colores del viejo botón */
+  box-shadow: 0 0 25px rgba(0, 40, 240, 0.5); /* Inicial sombra */
+  text-decoration: none;
+  cursor: pointer;
+  transition: 0.5s ease;
+  transition-property: box-shadow, transform;
+}
+
+.mega__btn:hover {
+  box-shadow: 0 0 5px #f72b8e, 0 0 25px #0028f0, 0 0 50px #f72b8e,
+    0 0 100px #0028f0;
+  transform: translateY(-3px);
+}
+.seccion h2 {
+  margin-bottom: 2rem; /* 👈 Espacio entre título y botones */
+}
+
+/* -- Carta de programadores 
+
+*/
+
+/* From Uiverse.io by Daniel1227k */
+.card {
+  position: relative;
+  background: linear-gradient(315deg, #035c7a, #8a0036);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* Responsivo con clamp */
+  /* Más grande, pero aún responsivo */
+  width: clamp(220px, 35vw, 300px);
+  height: clamp(280px, 45vw, 360px);
+
+  margin: clamp(10px, 2.5vw, 20px);
+  padding: clamp(1.2rem, 2.5vw, 2rem);
+
+  border-radius: clamp(0.75rem, 1.5vw, 1.25rem);
+  box-shadow: 0 0 clamp(12px, 3vw, 24px) rgba(0, 0, 0, 0.25);
+
+  flex: 1 1 clamp(220px, 35vw, 300px);
+}
+
+.profile {
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: clamp(1rem, 4vw, 2rem);
+  margin: clamp(2rem, 5vw, 4rem) auto;
+  max-width: clamp(280px, 90vw, 500px);
+  border-radius: clamp(0.75rem, 2vw, 1.5rem);
+  box-shadow: 0 0 clamp(10px, 2vw, 20px) rgba(0, 0, 0, 0.1);
+}
+.title {
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+  font-weight: 600;
+  color: #fff;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+  transition: 0.5s;
+}
+.profile img {
+  width: clamp(60px, 15vw, 100px);
+  height: clamp(60px, 15vw, 100px);
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #eee;
+  margin-bottom: clamp(1rem, 2vw, 1.5rem);
+}
+
+.info {
+  flex: 1;
+}
+
+.subtitle {
+  display: block;
+  font-size: clamp(0.9rem, 2vw, 1.2rem);
+  color: #00cfff;
+  margin-bottom: 0.5rem;
+  transition: 0.5s;
+}
+.card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(315deg, #035c7a, #8a0036);
+}
+
+.card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(315deg, #035c7a, #8a0036);
+  filter: blur(30px);
+}
+
+.card b {
+  position: absolute;
+  inset: 6px;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 2;
+}
+
+#miembros .gridP .card img {
+  width: 50%; /* Establece un tamaño fijo para la imagen */
+  height: auto; /* Mantiene la proporción de la imagen */
+  margin-bottom: 10%; /* Opcional: espacio debajo de la imagen */
+}
+
+.card:hover .profile {
+  transform: scale(0.9);
+  opacity: 0.3;
+  transition: 0.5s;
+  filter: blur(2px);
+  transition: filter 0.3s ease;
+}
+
+.card:hover .content img {
+  scale: 0.5;
+  opacity: 0.9;
+  transform: translateY(-70px);
+}
+
+.card .content {
+  padding: 4% 8%;
+  position: absolute;
+  z-index: 3;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transform: scale(0);
+  transition: 0.5s;
+  overflow: hidden; 
+   max-height: 100%; /* Opcional: evita que crezca más que su contenedor */
+}
+
+.card:hover .content {
+  transform: scale(1);
+}
+
+.card .content p.title  {
+  position: relative;
+  top: 0; /* Asegura que el texto comience desde la parte superior */
+  color: #fff;
+  font-weight: 500;
+  line-height: 1em;
+  max-height: 100%; /* o algo como 6em */
+  font-size: clamp(0.6rem, 3.5vw, 1.2rem)!important; /* Ajusta el tamaño de la fuente */
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.content .title span {
+  font-weight: 300;
+  font-size: clamp(0.7rem, 4vw, 1rem); 
+}
+
+.content .sci {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-top: 5px;
+}
+
+.sci li {
+  list-style: none;
+}
+
+.sci li .fa-brands {
+  width: 14px;
+}
+
+.sci li .fa-facebook {
+  width: 10px;
+}
+
+.sci li a {
+  position: relative;
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.5);
+  background: rgba(0, 0, 0, 0.2);
+  fill: currentColor;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  transition: 0.5s;
+}
+
+.sci li a:hover {
+  fill: currentColor;
+  color: rgba(255, 255, 255, 1);
+}
+
+
+
+
+
+
+
+/* Estilo para el botón de "Volver Arriba" */
+/* From Uiverse.io by adamgiebl */ 
+.cardC {
+  width: clamp(200px, 40vw, 300px); /* Ajusta el ancho dinámicamente entre 200px y 300px, con un máximo de 40% del ancho de la pantalla */
+  height: clamp(250px, 60vw, 400px); /* Ajusta la altura dinámicamente entre 250px y 400px, con un máximo de 60% del ancho de la pantalla */
+  aspect-ratio: 190 / 254; /* Mantiene la proporción original */
+  border-radius: 20px;
+  padding: 1%;
+  box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+  background-image: linear-gradient(144deg, #AF40FF, #5B42F3 50%, #00DDEB);
+  margin: 6%;
+}
+
+.card__contentC {
+  background: rgb(5, 6, 45);
+  border-radius: 17px;
+  width: 100%;
+  height: 100%;
+  padding: 5%; /* Usamos un porcentaje para hacer el padding relativo al tamaño de la tarjeta */
+  box-sizing: border-box; /* Asegura que el padding no afecte el tamaño total de la tarjeta */
+}
+.card__contentC h4 {
+  /* Ajusta el tamaño de fuente responsivamente */
+  overflow-wrap: break-word; /* Permite saltar de línea cuando sea necesario, pero solo en puntos de ruptura naturales (espacios) */
+  word-break: normal;         /* Asegura la separación natural */
+  white-space: normal;
+  font-size: clamp(0.9rem, 3.2vw, 1.5rem) !important;
+  text-align: center;
+  margin-bottom: 8%;
+}
+
+/* Aplica cambios solo a los p dentro de .card__contentC */
+.card__contentC p {
+  /* Ajusta el tamaño de fuente responsivamente */
+  overflow-wrap: break-word; /* Permite saltar de línea cuando sea necesario, pero solo en puntos de ruptura naturales (espacios) */
+  word-break: normal;         /* Asegura la separación natural */
+  white-space: normal;
+  font-size: clamp(0.8rem, 2.4vw, 1.1rem)!important; /* Ajusta el tamaño de fuente responsivamente */
+  line-height: 1.4;
+  text-align: center;
+  margin: 0;
+  padding: 0 1rem;
+}
