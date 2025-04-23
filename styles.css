@@ -663,7 +663,23 @@ footer {
   right: -8px;
   bottom: -8px;
 }
+.maginBOton{
 
+
+  margin-bottom: 1rem ;
+}
+
+.botones-comprar a {
+margin-left: 0.5rem;
+margin-right: 0.5rem;
+}
+p .maginBOton{
+
+
+
+  margin-bottom: 2rem ;
+
+}
 .toggle-btn {
   position: fixed;
   top: 10%;
